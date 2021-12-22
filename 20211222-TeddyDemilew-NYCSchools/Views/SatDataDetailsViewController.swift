@@ -66,8 +66,7 @@ class SatDataDetailsViewController: UIViewController, Coordinating {
     let schoolTenthSeatLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = .systemFont(ofSize: 14)
-        label.font.fontName = .
+        label.font = .systemFont(ofSize: 14)        
         label.numberOfLines = 0
         return label
     }()
