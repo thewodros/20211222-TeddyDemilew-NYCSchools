@@ -8,7 +8,7 @@
 import UIKit
 
 enum Event {
-    
+    case searchSchools(zip: String?)
 }
 
 protocol Coordinator {

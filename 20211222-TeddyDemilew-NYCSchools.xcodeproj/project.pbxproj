@@ -21,6 +21,7 @@
 		9F9CE4382773343600014AAC /* SatData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9CE4372773343600014AAC /* SatData.swift */; };
 		9F9CE43A277335D800014AAC /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9CE439277335D800014AAC /* Networking.swift */; };
 		9F9CE43C2773367100014AAC /* SocrataNetworkingClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9CE43B2773367100014AAC /* SocrataNetworkingClient.swift */; };
+		9F9CE43E27736AA800014AAC /* HomeCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9CE43D27736AA800014AAC /* HomeCustomCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		9F9CE4372773343600014AAC /* SatData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SatData.swift; sourceTree = "<group>"; };
 		9F9CE439277335D800014AAC /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		9F9CE43B2773367100014AAC /* SocrataNetworkingClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocrataNetworkingClient.swift; sourceTree = "<group>"; };
+		9F9CE43D27736AA800014AAC /* HomeCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCustomCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				9F9CE40127732EF700014AAC /* HomeViewController.swift */,
+				9F9CE43D27736AA800014AAC /* HomeCustomCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -305,6 +308,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F9CE4322773318B00014AAC /* Coordinator.swift in Sources */,
+				9F9CE43E27736AA800014AAC /* HomeCustomCell.swift in Sources */,
 				9F9CE4382773343600014AAC /* SatData.swift in Sources */,
 				9F9CE4362773340600014AAC /* School.swift in Sources */,
 				9F9CE43A277335D800014AAC /* Networking.swift in Sources */,
