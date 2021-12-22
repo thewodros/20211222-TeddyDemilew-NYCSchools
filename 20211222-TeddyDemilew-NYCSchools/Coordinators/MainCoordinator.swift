@@ -10,7 +10,7 @@ import UIKit
 class MainCoordinator: Coordinator {
     
     var navController: UINavigationController?
-    private var homeVC: HomeViewController!
+    private var homeVC: (HomeViewController & Coordinating)!
     private var networkService: NetworkService!
     
     init(rootVC: UINavigationController,
@@ -18,6 +18,7 @@ class MainCoordinator: Coordinator {
         navController = rootVC
         self.networkService = networkService
         homeVC = HomeViewController(model: HomeViewController.Model(schools: []))
+        homeVC.coordinator = self
         navController?.viewControllers = [homeVC]
     }
     
@@ -26,22 +27,30 @@ class MainCoordinator: Coordinator {
     }
     
     func received(event: Event) {
-        
+        switch event {
+        case .searchSchools(let zip):
+            fetchSchools(zip: zip)
+        case .schoolCellSelected(let school):
+            openDetailsView(for: school)
+        }
     }
 }
 
 
 private extension MainCoordinator {
-    func fetchSchools() {
-        let request = SchoolsRequest(zip: nil)
+    func fetchSchools(zip: String? = nil) {
+        let zip = zip?.isEmpty == true ? nil : zip
+        let request = SchoolsRequest(zip: zip)
 
         networkService.fetchSchools(for: request) { [weak self] result in
-            switch result {
-            case .success(let schools):
-                self?.homeVC.model = HomeViewController.Model(schools: schools)
-            case .failure(let error):
-                self?.homeVC.model = HomeViewController.Model(schools: [],
-                                                              error: error)
+            DispatchQueue.main.async {
+                switch result {
+                case .success(let schools):
+                    self?.homeVC.model = HomeViewController.Model(schools: schools)
+                case .failure(let error):
+                    self?.homeVC.model = HomeViewController.Model(schools: [],
+                                                                  error: error)
+                }
             }
         }
     }
@@ -50,12 +59,18 @@ private extension MainCoordinator {
         let request = SatDataRequest(dbn: "01M292")
         
         networkService.fetchSATData(for: request) { result in
-            switch result {
-            case .success(let satData):
-                print("satData: \(satData)")
-            case .failure(let error):
-                print("Error: \(error.localizedDescription)")
+            DispatchQueue.main.async {
+                switch result {
+                case .success(let satData):
+                    print("satData: \(satData)")
+                case .failure(let error):
+                    print("Error: \(error.localizedDescription)")
+                }
             }
         }
+    }
+    
+    func openDetailsView(for school: School) {
+        print("open details for school: \(school.name ?? "-")")
     }
 }

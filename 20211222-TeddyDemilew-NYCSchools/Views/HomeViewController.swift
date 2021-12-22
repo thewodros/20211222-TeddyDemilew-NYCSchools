@@ -14,7 +14,7 @@ enum Section {
 private typealias TableViewDiffableDataSource = UITableViewDiffableDataSource<Section, School>
 private typealias DiffableDataSourceSnapshot = NSDiffableDataSourceSnapshot<Section, School>
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController, Coordinating {
 
     struct Model {
         var schools: [School]?
@@ -27,6 +27,7 @@ class HomeViewController: UIViewController {
         }
     }
     
+    var coordinator: Coordinator?
     private var dataSource: TableViewDiffableDataSource!
     
     
@@ -74,6 +75,7 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBlue
+        title = "Schools"
         
         view.addSubview(searchBar)
         view.addSubview(tableView)
@@ -119,7 +121,7 @@ class HomeViewController: UIViewController {
 
     // MARK: -
     
-    func applyModel() {
+    private func applyModel() {
         if let error = model.error {
             show(error: error)
             return
@@ -129,12 +131,14 @@ class HomeViewController: UIViewController {
             return
         }
 
-        print("Number of schools: \(schools.count)")
+        if schools.isEmpty {
+            showAlert(title: "", message: "No data available.")
+        }
 
         updateSnapshot()
     }
 
-    func show(error: NetworkError) {
+    private func show(error: NetworkError) {
         var message: String
         switch error {
         case .badURL:
@@ -147,19 +151,22 @@ class HomeViewController: UIViewController {
             message = "Data decoding error."
         }
         
-        let alert = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
+        showAlert(title: "Error", message: message)
+    }
+    
+    private func showAlert(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default))
         self.present(alert, animated: true)
     }
     
     @objc func cancel () {
-        print("cancel")
         searchBar.resignFirstResponder()
     }
 
     @objc func search () {
-        print("sarch")
-        // TODO: fetch schools with this code
+        searchBar.resignFirstResponder()
+        coordinator?.received(event: .searchSchools(zip: searchBar.text))
     }
 }
 
