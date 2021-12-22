@@ -22,6 +22,9 @@
 		9F9CE43A277335D800014AAC /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9CE439277335D800014AAC /* Networking.swift */; };
 		9F9CE43C2773367100014AAC /* SocrataNetworkingClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9CE43B2773367100014AAC /* SocrataNetworkingClient.swift */; };
 		9F9CE43E27736AA800014AAC /* HomeCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9CE43D27736AA800014AAC /* HomeCustomCell.swift */; };
+		9F9CE442277394FA00014AAC /* SatDataDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9CE441277394FA00014AAC /* SatDataDetailsViewController.swift */; };
+		9F9CE4452773A12F00014AAC /* ColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9CE4442773A12F00014AAC /* ColorExtensions.swift */; };
+		9F9CE4472773A9D100014AAC /* NavigationControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9CE4462773A9D100014AAC /* NavigationControllerExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +64,9 @@
 		9F9CE439277335D800014AAC /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		9F9CE43B2773367100014AAC /* SocrataNetworkingClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocrataNetworkingClient.swift; sourceTree = "<group>"; };
 		9F9CE43D27736AA800014AAC /* HomeCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCustomCell.swift; sourceTree = "<group>"; };
+		9F9CE441277394FA00014AAC /* SatDataDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SatDataDetailsViewController.swift; sourceTree = "<group>"; };
+		9F9CE4442773A12F00014AAC /* ColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtensions.swift; sourceTree = "<group>"; };
+		9F9CE4462773A9D100014AAC /* NavigationControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +126,7 @@
 				9F9CE42F2773311A00014AAC /* Services */,
 				9F9CE4302773312F00014AAC /* Model */,
 				9F9CE42D277330F700014AAC /* Views */,
+				9F9CE4432773A10E00014AAC /* Extensions */,
 			);
 			path = "20211222-TeddyDemilew-NYCSchools";
 			sourceTree = "<group>";
@@ -146,6 +153,7 @@
 			children = (
 				9F9CE40127732EF700014AAC /* HomeViewController.swift */,
 				9F9CE43D27736AA800014AAC /* HomeCustomCell.swift */,
+				9F9CE441277394FA00014AAC /* SatDataDetailsViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -175,6 +183,15 @@
 				9F9CE4372773343600014AAC /* SatData.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		9F9CE4432773A10E00014AAC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9F9CE4442773A12F00014AAC /* ColorExtensions.swift */,
+				9F9CE4462773A9D100014AAC /* NavigationControllerExtensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -310,13 +327,16 @@
 				9F9CE4322773318B00014AAC /* Coordinator.swift in Sources */,
 				9F9CE43E27736AA800014AAC /* HomeCustomCell.swift in Sources */,
 				9F9CE4382773343600014AAC /* SatData.swift in Sources */,
+				9F9CE442277394FA00014AAC /* SatDataDetailsViewController.swift in Sources */,
 				9F9CE4362773340600014AAC /* School.swift in Sources */,
+				9F9CE4472773A9D100014AAC /* NavigationControllerExtensions.swift in Sources */,
 				9F9CE43A277335D800014AAC /* Networking.swift in Sources */,
 				9F9CE40227732EF700014AAC /* HomeViewController.swift in Sources */,
 				9F9CE43C2773367100014AAC /* SocrataNetworkingClient.swift in Sources */,
 				9F9CE3FE27732EF700014AAC /* AppDelegate.swift in Sources */,
 				9F9CE4342773320A00014AAC /* MainCoordinator.swift in Sources */,
 				9F9CE40027732EF700014AAC /* SceneDelegate.swift in Sources */,
+				9F9CE4452773A12F00014AAC /* ColorExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -17,7 +17,7 @@ class HomeCustomCell: UITableViewCell {
         return label
     }()
     
-    let locationLabel: UILabel = {
+    let detailsLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = .systemFont(ofSize: 14)
@@ -39,7 +39,7 @@ class HomeCustomCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         stackView.addArrangedSubview(nameLabel)
-        stackView.addArrangedSubview(locationLabel)
+        stackView.addArrangedSubview(detailsLabel)
         contentView.addSubview(stackView)
         contentView.backgroundColor = .white
         backgroundColor = .white //.darkGray

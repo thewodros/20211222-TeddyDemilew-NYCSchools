@@ -10,19 +10,24 @@ import UIKit
 class MainCoordinator: Coordinator {
     
     var navController: UINavigationController?
-    private var homeVC: (HomeViewController & Coordinating)!
     private var networkService: NetworkService!
+    private var homeVC: (HomeViewController & Coordinating)! = {
+        return HomeViewController(model: HomeViewController.Model(schools: []))
+    }()
+    private lazy var satDataDetailsVC: (SatDataDetailsViewController & Coordinating)! = {
+        return SatDataDetailsViewController(model: SatDataDetailsViewController.Model())
+    }()
     
     init(rootVC: UINavigationController,
          networkService: NetworkService = SocrataNetworkingClient()) {
         navController = rootVC
         self.networkService = networkService
-        homeVC = HomeViewController(model: HomeViewController.Model(schools: []))
         homeVC.coordinator = self
         navController?.viewControllers = [homeVC]
     }
     
-    func start() {        
+    func start() {
+        navController?.appNavBarStyle()
         fetchSchools()
     }
     
@@ -58,19 +63,23 @@ private extension MainCoordinator {
     func fetchSATData() {
         let request = SatDataRequest(dbn: "01M292")
         
-        networkService.fetchSATData(for: request) { result in
+        networkService.fetchSATData(for: request) { [weak self] result in
             DispatchQueue.main.async {
                 switch result {
                 case .success(let satData):
-                    print("satData: \(satData)")
+                    self?.satDataDetailsVC.model.satData = satData
                 case .failure(let error):
-                    print("Error: \(error.localizedDescription)")
+                    self?.satDataDetailsVC.model.error = error
                 }
+                self?.satDataDetailsVC.model.isLoading = false
             }
         }
     }
     
     func openDetailsView(for school: School) {
-        print("open details for school: \(school.name ?? "-")")
+        satDataDetailsVC.model.isLoading = true
+        satDataDetailsVC.model.school = school
+        fetchSATData()
+        self.navController?.pushViewController(satDataDetailsVC, animated: true)
     }
 }

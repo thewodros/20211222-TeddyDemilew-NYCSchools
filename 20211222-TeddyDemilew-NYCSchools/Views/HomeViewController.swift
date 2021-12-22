@@ -74,7 +74,7 @@ class HomeViewController: UIViewController, Coordinating {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .systemBlue
+        view.backgroundColor = UIColor().appColor
         title = "Schools"
         
         view.addSubview(searchBar)
@@ -105,7 +105,7 @@ class HomeViewController: UIViewController, Coordinating {
         dataSource = TableViewDiffableDataSource(tableView: tableView) { (tableView, indexPath, school) -> UITableViewCell? in
             let cell = tableView.dequeueReusableCell(withIdentifier: HomeCustomCell.identifier, for: indexPath) as? HomeCustomCell
             cell?.nameLabel.text = school.name
-            cell?.locationLabel.text = school.details
+            cell?.detailsLabel.text = "School 10th Seat: \(school.tenthSeats ?? "") \n\(school.details)"
             return cell
         }
     }
@@ -131,6 +131,8 @@ class HomeViewController: UIViewController, Coordinating {
             return
         }
 
+        title = "Schools  (\(schools.count) found)"
+        
         if schools.isEmpty {
             showAlert(title: "", message: "No data available.")
         }
@@ -173,6 +175,13 @@ class HomeViewController: UIViewController, Coordinating {
 extension HomeViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 120
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        if let school = model.schools?[indexPath.row] {
+            coordinator?.received(event: .schoolCellSelected(school: school))
+        }
     }
 }
 

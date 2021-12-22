@@ -41,14 +41,12 @@ struct School: Codable, Hashable {
     
     var details: String {
         var details: String = ""
-
-        details += "School 10th Seat: \(tenthSeats ?? "NA")"
         
         if let city = city, let state = state {
-            details += "\n\(city), \(state)"
+            details += "\(city), \(state)"
         }
         
-        if let zip = zip {
+        if let zip = zip {            
             details += details.isEmpty ? "\(zip)" : " \(zip)"
         }
         
