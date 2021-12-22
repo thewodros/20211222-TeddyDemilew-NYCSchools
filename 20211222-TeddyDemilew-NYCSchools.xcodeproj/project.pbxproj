@@ -17,6 +17,8 @@
 		9F9CE42127732EFD00014AAC /* _0211222_TeddyDemilew_NYCSchoolsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9CE42027732EFD00014AAC /* _0211222_TeddyDemilew_NYCSchoolsUITestsLaunchTests.swift */; };
 		9F9CE4322773318B00014AAC /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9CE4312773318B00014AAC /* Coordinator.swift */; };
 		9F9CE4342773320A00014AAC /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9CE4332773320A00014AAC /* MainCoordinator.swift */; };
+		9F9CE4362773340600014AAC /* School.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9CE4352773340600014AAC /* School.swift */; };
+		9F9CE4382773343600014AAC /* SatData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9CE4372773343600014AAC /* SatData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		9F9CE42027732EFD00014AAC /* _0211222_TeddyDemilew_NYCSchoolsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _0211222_TeddyDemilew_NYCSchoolsUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		9F9CE4312773318B00014AAC /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		9F9CE4332773320A00014AAC /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		9F9CE4352773340600014AAC /* School.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = School.swift; sourceTree = "<group>"; };
+		9F9CE4372773343600014AAC /* SatData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SatData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +162,8 @@
 		9F9CE4302773312F00014AAC /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				9F9CE4352773340600014AAC /* School.swift */,
+				9F9CE4372773343600014AAC /* SatData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -293,6 +299,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F9CE4322773318B00014AAC /* Coordinator.swift in Sources */,
+				9F9CE4382773343600014AAC /* SatData.swift in Sources */,
+				9F9CE4362773340600014AAC /* School.swift in Sources */,
 				9F9CE40227732EF700014AAC /* HomeViewController.swift in Sources */,
 				9F9CE3FE27732EF700014AAC /* AppDelegate.swift in Sources */,
 				9F9CE4342773320A00014AAC /* MainCoordinator.swift in Sources */,
