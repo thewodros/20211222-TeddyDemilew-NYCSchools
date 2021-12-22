@@ -19,6 +19,8 @@
 		9F9CE4342773320A00014AAC /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9CE4332773320A00014AAC /* MainCoordinator.swift */; };
 		9F9CE4362773340600014AAC /* School.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9CE4352773340600014AAC /* School.swift */; };
 		9F9CE4382773343600014AAC /* SatData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9CE4372773343600014AAC /* SatData.swift */; };
+		9F9CE43A277335D800014AAC /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9CE439277335D800014AAC /* Networking.swift */; };
+		9F9CE43C2773367100014AAC /* SocrataNetworkingClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9CE43B2773367100014AAC /* SocrataNetworkingClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		9F9CE4332773320A00014AAC /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		9F9CE4352773340600014AAC /* School.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = School.swift; sourceTree = "<group>"; };
 		9F9CE4372773343600014AAC /* SatData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SatData.swift; sourceTree = "<group>"; };
+		9F9CE439277335D800014AAC /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		9F9CE43B2773367100014AAC /* SocrataNetworkingClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocrataNetworkingClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +159,8 @@
 		9F9CE42F2773311A00014AAC /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				9F9CE439277335D800014AAC /* Networking.swift */,
+				9F9CE43B2773367100014AAC /* SocrataNetworkingClient.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -301,7 +307,9 @@
 				9F9CE4322773318B00014AAC /* Coordinator.swift in Sources */,
 				9F9CE4382773343600014AAC /* SatData.swift in Sources */,
 				9F9CE4362773340600014AAC /* School.swift in Sources */,
+				9F9CE43A277335D800014AAC /* Networking.swift in Sources */,
 				9F9CE40227732EF700014AAC /* HomeViewController.swift in Sources */,
+				9F9CE43C2773367100014AAC /* SocrataNetworkingClient.swift in Sources */,
 				9F9CE3FE27732EF700014AAC /* AppDelegate.swift in Sources */,
 				9F9CE4342773320A00014AAC /* MainCoordinator.swift in Sources */,
 				9F9CE40027732EF700014AAC /* SceneDelegate.swift in Sources */,
