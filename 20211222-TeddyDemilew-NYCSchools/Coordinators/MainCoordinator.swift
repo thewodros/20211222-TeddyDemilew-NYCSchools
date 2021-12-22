@@ -11,8 +11,8 @@ class MainCoordinator: Coordinator {
     var navController: UINavigationController?
     
     func start() {
-        let vc = ViewController()
-        navController?.viewControllers = [vc]
+        let homeVC = HomeViewController()
+        navController?.viewControllers = [homeVC]
     }
     
     func received(event: Event) {
