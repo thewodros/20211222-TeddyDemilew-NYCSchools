@@ -15,6 +15,8 @@
 		9F9CE41527732EFD00014AAC /* _0211222_TeddyDemilew_NYCSchoolsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9CE41427732EFD00014AAC /* _0211222_TeddyDemilew_NYCSchoolsTests.swift */; };
 		9F9CE41F27732EFD00014AAC /* _0211222_TeddyDemilew_NYCSchoolsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9CE41E27732EFD00014AAC /* _0211222_TeddyDemilew_NYCSchoolsUITests.swift */; };
 		9F9CE42127732EFD00014AAC /* _0211222_TeddyDemilew_NYCSchoolsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9CE42027732EFD00014AAC /* _0211222_TeddyDemilew_NYCSchoolsUITestsLaunchTests.swift */; };
+		9F9CE4322773318B00014AAC /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9CE4312773318B00014AAC /* Coordinator.swift */; };
+		9F9CE4342773320A00014AAC /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9CE4332773320A00014AAC /* MainCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		9F9CE41A27732EFD00014AAC /* 20211222-TeddyDemilew-NYCSchoolsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "20211222-TeddyDemilew-NYCSchoolsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F9CE41E27732EFD00014AAC /* _0211222_TeddyDemilew_NYCSchoolsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _0211222_TeddyDemilew_NYCSchoolsUITests.swift; sourceTree = "<group>"; };
 		9F9CE42027732EFD00014AAC /* _0211222_TeddyDemilew_NYCSchoolsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _0211222_TeddyDemilew_NYCSchoolsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		9F9CE4312773318B00014AAC /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		9F9CE4332773320A00014AAC /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,10 +103,13 @@
 			children = (
 				9F9CE3FD27732EF700014AAC /* AppDelegate.swift */,
 				9F9CE3FF27732EF700014AAC /* SceneDelegate.swift */,
-				9F9CE40127732EF700014AAC /* ViewController.swift */,
 				9F9CE40627732EFD00014AAC /* Assets.xcassets */,
 				9F9CE40827732EFD00014AAC /* LaunchScreen.storyboard */,
 				9F9CE40B27732EFD00014AAC /* Info.plist */,
+				9F9CE42E2773310900014AAC /* Coordinators */,
+				9F9CE42F2773311A00014AAC /* Services */,
+				9F9CE4302773312F00014AAC /* Model */,
+				9F9CE42D277330F700014AAC /* Views */,
 			);
 			path = "20211222-TeddyDemilew-NYCSchools";
 			sourceTree = "<group>";
@@ -122,6 +129,37 @@
 				9F9CE42027732EFD00014AAC /* _0211222_TeddyDemilew_NYCSchoolsUITestsLaunchTests.swift */,
 			);
 			path = "20211222-TeddyDemilew-NYCSchoolsUITests";
+			sourceTree = "<group>";
+		};
+		9F9CE42D277330F700014AAC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9F9CE40127732EF700014AAC /* ViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9F9CE42E2773310900014AAC /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				9F9CE4312773318B00014AAC /* Coordinator.swift */,
+				9F9CE4332773320A00014AAC /* MainCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		9F9CE42F2773311A00014AAC /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		9F9CE4302773312F00014AAC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,8 +292,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F9CE4322773318B00014AAC /* Coordinator.swift in Sources */,
 				9F9CE40227732EF700014AAC /* ViewController.swift in Sources */,
 				9F9CE3FE27732EF700014AAC /* AppDelegate.swift in Sources */,
+				9F9CE4342773320A00014AAC /* MainCoordinator.swift in Sources */,
 				9F9CE40027732EF700014AAC /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
