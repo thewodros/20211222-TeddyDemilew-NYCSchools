@@ -18,11 +18,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.title = self.schoolName;
 
     self.mapView = [[MKMapView alloc] initWithFrame:self.view.frame];
     [self.view addSubview:self.mapView];
-        
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+
+    // set title of navBar with the school name
+    self.title = self.schoolName;
 
     // set region
     CLLocationCoordinate2D coordinate = {.latitude = self.lat, .longitude = self.lng}; //CLLocationCoordinate2DMake(self.lat, self.lng);
@@ -37,6 +42,5 @@
     [annotation setTitle:self.schoolName];
     [self.mapView addAnnotation:annotation];
 }
-
 
 @end
