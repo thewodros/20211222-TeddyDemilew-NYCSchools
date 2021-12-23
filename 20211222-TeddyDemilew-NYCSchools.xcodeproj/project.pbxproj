@@ -126,6 +126,7 @@
 				9F9CE40627732EFD00014AAC /* Assets.xcassets */,
 				9F9CE40827732EFD00014AAC /* LaunchScreen.storyboard */,
 				9F9CE40B27732EFD00014AAC /* Info.plist */,
+				9F9CE4482773C9D700014AAC /* 20211222-TeddyDemilew-NYCSchools-Bridging-Header.h */,
 				9F9CE42E2773310900014AAC /* Coordinators */,
 				9F9CE42F2773311A00014AAC /* Services */,
 				9F9CE4302773312F00014AAC /* Model */,
@@ -158,6 +159,8 @@
 				9F9CE40127732EF700014AAC /* HomeViewController.swift */,
 				9F9CE43D27736AA800014AAC /* HomeCustomCell.swift */,
 				9F9CE441277394FA00014AAC /* SatDataDetailsViewController.swift */,
+				9F9CE4492773C9D700014AAC /* MapViewController.h */,
+				9F9CE44A2773C9D700014AAC /* MapViewController.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -185,9 +188,6 @@
 			children = (
 				9F9CE4352773340600014AAC /* School.swift */,
 				9F9CE4372773343600014AAC /* SatData.swift */,
-				9F9CE4492773C9D700014AAC /* MapViewController.h */,
-				9F9CE44A2773C9D700014AAC /* MapViewController.m */,
-				9F9CE4482773C9D700014AAC /* 20211222-TeddyDemilew-NYCSchools-Bridging-Header.h */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -532,7 +532,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.teddy.-0211222-TeddyDemilew-NYCSchools";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "20211222-TeddyDemilew-NYCSchools/Model/20211222-TeddyDemilew-NYCSchools-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "20211222-TeddyDemilew-NYCSchools/20211222-TeddyDemilew-NYCSchools-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -562,7 +562,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.teddy.-0211222-TeddyDemilew-NYCSchools";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "20211222-TeddyDemilew-NYCSchools/Model/20211222-TeddyDemilew-NYCSchools-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "20211222-TeddyDemilew-NYCSchools/20211222-TeddyDemilew-NYCSchools-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
