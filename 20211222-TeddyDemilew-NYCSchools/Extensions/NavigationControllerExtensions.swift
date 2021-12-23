@@ -9,9 +9,9 @@ import Foundation
 import UIKit
 
 extension UINavigationController {
-    func appNavBarStyle() {
-        navigationBar.barTintColor = .white
-        navigationBar.tintColor = .white
-        navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+    func appNavBarStyle(with tintColor: UIColor = .white) {
+        navigationBar.barTintColor = tintColor
+        navigationBar.tintColor = tintColor
+        navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: tintColor]
     }
 }

@@ -66,7 +66,7 @@ class SatDataDetailsViewController: UIViewController, Coordinating {
     let schoolTenthSeatLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = .systemFont(ofSize: 14)        
+        label.font = .systemFont(ofSize: 14)
         label.numberOfLines = 0
         return label
     }()
@@ -103,6 +103,17 @@ class SatDataDetailsViewController: UIViewController, Coordinating {
         return label
     }()
 
+    let openMapButton: UIButton = {
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setTitle("Show School on Map", for: .normal)
+        button.setTitleColor(.black, for: .normal)
+        button.setTitleColor(.white, for: .normal)
+        button.layer.cornerRadius = 6
+        button.backgroundColor = UIColor().appColor
+        return button
+    }()
+    
     // TODO: replace this static text with UIActivityIndicator
     let loadingLabel: UILabel = {
         let label = UILabel()
@@ -147,6 +158,9 @@ class SatDataDetailsViewController: UIViewController, Coordinating {
         stackView.addArrangedSubview(writingScoreLabel)
         stackView.addArrangedSubview(schoolOverviewLabel)
         stackView.addArrangedSubview(schoolDetailsLabel)
+        stackView.addArrangedSubview(openMapButton)
+        
+        openMapButton.addTarget(self, action: #selector(openMap), for: .touchUpInside)
     }
     
     override func viewDidLayoutSubviews() {
@@ -158,9 +172,10 @@ class SatDataDetailsViewController: UIViewController, Coordinating {
         container.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor).isActive = true
 
         stackView.topAnchor.constraint(equalTo: container.topAnchor).isActive = true
-        //stackView.bottomAnchor.constraint(equalTo: container.bottomAnchor).isActive = true
         stackView.leftAnchor.constraint(equalTo: container.leftAnchor, constant: 12).isActive = true
         stackView.rightAnchor.constraint(equalTo: container.rightAnchor, constant: -12).isActive = true
+
+        openMapButton.widthAnchor.constraint(equalToConstant: 200).isActive = true
     }
     
     func applyModel() {
@@ -170,8 +185,7 @@ class SatDataDetailsViewController: UIViewController, Coordinating {
         
         loadingLabel.isHidden = true
         
-        //nameLabel.text = model.school?.name
-        nameLabel.text = model.satData?.first?.schoolName
+        nameLabel.text = model.school?.name
 
         schoolTenthSeatLabel.text = "SCHOOL 10th SEAT: \(model.school?.tenthSeats ?? "NA")"
 
@@ -187,5 +201,14 @@ class SatDataDetailsViewController: UIViewController, Coordinating {
         schoolOverviewLabel.isHidden = model.school?.overview == nil
         
         schoolDetailsLabel.text = model.school?.details        
+    }
+    
+    @objc func openMap() {
+        guard let lat = Double(model.school?.lat ?? ""),
+                let lng = Double(model.school?.lng ?? "") else {
+            return
+        }
+
+        coordinator?.received(event: .openMap(lat: lat, lng: lng, schoolName: model.school?.name ?? ""))
     }
 }

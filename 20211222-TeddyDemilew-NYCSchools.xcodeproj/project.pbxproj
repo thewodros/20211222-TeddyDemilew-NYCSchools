@@ -25,6 +25,7 @@
 		9F9CE442277394FA00014AAC /* SatDataDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9CE441277394FA00014AAC /* SatDataDetailsViewController.swift */; };
 		9F9CE4452773A12F00014AAC /* ColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9CE4442773A12F00014AAC /* ColorExtensions.swift */; };
 		9F9CE4472773A9D100014AAC /* NavigationControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9CE4462773A9D100014AAC /* NavigationControllerExtensions.swift */; };
+		9F9CE44B2773C9D700014AAC /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F9CE44A2773C9D700014AAC /* MapViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,9 @@
 		9F9CE441277394FA00014AAC /* SatDataDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SatDataDetailsViewController.swift; sourceTree = "<group>"; };
 		9F9CE4442773A12F00014AAC /* ColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtensions.swift; sourceTree = "<group>"; };
 		9F9CE4462773A9D100014AAC /* NavigationControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerExtensions.swift; sourceTree = "<group>"; };
+		9F9CE4482773C9D700014AAC /* 20211222-TeddyDemilew-NYCSchools-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "20211222-TeddyDemilew-NYCSchools-Bridging-Header.h"; sourceTree = "<group>"; };
+		9F9CE4492773C9D700014AAC /* MapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MapViewController.h; path = "20211222-TeddyDemilew-NYCSchools/Views/MapViewController.h"; sourceTree = SOURCE_ROOT; };
+		9F9CE44A2773C9D700014AAC /* MapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = MapViewController.m; path = "20211222-TeddyDemilew-NYCSchools/Views/MapViewController.m"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,6 +185,9 @@
 			children = (
 				9F9CE4352773340600014AAC /* School.swift */,
 				9F9CE4372773343600014AAC /* SatData.swift */,
+				9F9CE4492773C9D700014AAC /* MapViewController.h */,
+				9F9CE44A2773C9D700014AAC /* MapViewController.m */,
+				9F9CE4482773C9D700014AAC /* 20211222-TeddyDemilew-NYCSchools-Bridging-Header.h */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -262,6 +269,7 @@
 				TargetAttributes = {
 					9F9CE3F927732EF700014AAC = {
 						CreatedOnToolsVersion = 13.0;
+						LastSwiftMigration = 1300;
 					};
 					9F9CE40F27732EFD00014AAC = {
 						CreatedOnToolsVersion = 13.0;
@@ -337,6 +345,7 @@
 				9F9CE4342773320A00014AAC /* MainCoordinator.swift in Sources */,
 				9F9CE40027732EF700014AAC /* SceneDelegate.swift in Sources */,
 				9F9CE4452773A12F00014AAC /* ColorExtensions.swift in Sources */,
+				9F9CE44B2773C9D700014AAC /* MapViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -505,14 +514,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "20211222-TeddyDemilew-NYCSchools/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -521,6 +532,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.teddy.-0211222-TeddyDemilew-NYCSchools";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "20211222-TeddyDemilew-NYCSchools/Model/20211222-TeddyDemilew-NYCSchools-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -531,14 +544,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "20211222-TeddyDemilew-NYCSchools/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -547,6 +562,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.teddy.-0211222-TeddyDemilew-NYCSchools";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "20211222-TeddyDemilew-NYCSchools/Model/20211222-TeddyDemilew-NYCSchools-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

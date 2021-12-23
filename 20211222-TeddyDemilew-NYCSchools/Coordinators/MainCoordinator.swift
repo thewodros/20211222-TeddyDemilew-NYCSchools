@@ -11,18 +11,25 @@ class MainCoordinator: Coordinator {
     
     var navController: UINavigationController?
     private var networkService: NetworkService!
-    private var homeVC: (HomeViewController & Coordinating)! = {
-        return HomeViewController(model: HomeViewController.Model(schools: []))
+    private lazy var homeVC: (HomeViewController & Coordinating)! = {
+        let homeVC = HomeViewController(model: HomeViewController.Model(schools: []))
+        homeVC.coordinator = self
+        return homeVC
     }()
     private lazy var satDataDetailsVC: (SatDataDetailsViewController & Coordinating)! = {
-        return SatDataDetailsViewController(model: SatDataDetailsViewController.Model())
+        let satDataDetailsVC = SatDataDetailsViewController(model: SatDataDetailsViewController.Model())
+        satDataDetailsVC.coordinator = self
+        return satDataDetailsVC
+    }()
+    private lazy var mapVC: MapViewController! = {
+        return MapViewController()
     }()
     
     init(rootVC: UINavigationController,
          networkService: NetworkService = SocrataNetworkingClient()) {
         navController = rootVC
         self.networkService = networkService
-        homeVC.coordinator = self
+        //homeVC.coordinator = self
         navController?.viewControllers = [homeVC]
     }
     
@@ -37,6 +44,8 @@ class MainCoordinator: Coordinator {
             fetchSchools(zip: zip)
         case .schoolCellSelected(let school):
             openDetailsView(for: school)
+        case .openMap(let lat, let lng, let schoolName):
+            openMap(lat: lat, lng: lng, schoolName: schoolName)
         }
     }
 }
@@ -60,8 +69,8 @@ private extension MainCoordinator {
         }
     }
     
-    func fetchSATData() {
-        let request = SatDataRequest(dbn: "01M292")
+    func fetchSATData(for dbn: String ) {
+        let request = SatDataRequest(dbn: dbn)
         
         networkService.fetchSATData(for: request) { [weak self] result in
             DispatchQueue.main.async {
@@ -79,7 +88,14 @@ private extension MainCoordinator {
     func openDetailsView(for school: School) {
         satDataDetailsVC.model.isLoading = true
         satDataDetailsVC.model.school = school
-        fetchSATData()
+        fetchSATData(for: school.dbn)
         self.navController?.pushViewController(satDataDetailsVC, animated: true)
+    }
+    
+    func openMap(lat: Double, lng: Double, schoolName: String) {
+        mapVC.lat = lat
+        mapVC.lng = lng
+        mapVC.schoolName = schoolName
+        self.navController?.pushViewController(mapVC, animated: true)
     }
 }

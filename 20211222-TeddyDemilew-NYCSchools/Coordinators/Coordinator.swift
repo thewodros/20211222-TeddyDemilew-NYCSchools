@@ -10,6 +10,7 @@ import UIKit
 enum Event {
     case searchSchools(zip: String?)
     case schoolCellSelected(school: School)
+    case openMap(lat: Double, lng: Double, schoolName: String)
 }
 
 protocol Coordinator {
