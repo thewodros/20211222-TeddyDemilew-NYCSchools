@@ -10,7 +10,6 @@ Notes for code reviewers:
     - HomeViewController - (Swift)
     - SatDataDetailsViewController - (Swift) 
     - MapViewController (Objective-C)
-- added a search bar on the HomeViewController for the user to filter by zip code
+- added a search bar on the HomeViewController for the user to filter schools by zip code
 - added unit tests (if I had more time, I would write more unit and UI tests)
 - checked for memory and cpu usage - all normal
-- added app icons; I had to remove other icons (notification, setting, splotlight) to reduce the compressed file size
