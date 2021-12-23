@@ -84,5 +84,84 @@
             landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D0789420-136B-4D14-936C-407746E963EF"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "20211222-TeddyDemilew-NYCSchoolsTests/_0211222_TeddyDemilew_NYCSchoolsTests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "testModelView_forSuccessfulFetchSchool()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "D0789420-136B-4D14-936C-407746E963EF - 58b8190b8286beb7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Swift.Array&lt;_0211222_TeddyDemilew_NYCSchools.School&gt;, _0211222_TeddyDemilew_NYCSchools.NetworkError&gt;) -&gt; () in _0211222_TeddyDemilew_NYCSchoolsTests._0211222_TeddyDemilew_NYCSchoolsTests.testFetchSchool_successSetsModelView() throws -&gt; ()"
+                  moduleName = "20211222-TeddyDemilew-NYCSchoolsTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/teddy/iDev/apps/zCodeLab/20211222-TeddyDemilew-NYCSchools/20211222-TeddyDemilew-NYCSchoolsTests/_0211222_TeddyDemilew_NYCSchoolsTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "37"
+                  endingLineNumber = "37"
+                  offsetFromSymbolStart = "140">
+               </Location>
+               <Location
+                  uuid = "D0789420-136B-4D14-936C-407746E963EF - 58b8190b8286bd71"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Swift.Array&lt;_0211222_TeddyDemilew_NYCSchools.School&gt;, _0211222_TeddyDemilew_NYCSchools.NetworkError&gt;) -&gt; () in _0211222_TeddyDemilew_NYCSchoolsTests._0211222_TeddyDemilew_NYCSchoolsTests.testFetchSchool_successSetsModelView() throws -&gt; ()"
+                  moduleName = "20211222-TeddyDemilew-NYCSchoolsTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/teddy/iDev/apps/zCodeLab/20211222-TeddyDemilew-NYCSchools/20211222-TeddyDemilew-NYCSchoolsTests/_0211222_TeddyDemilew_NYCSchoolsTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "116">
+               </Location>
+               <Location
+                  uuid = "D0789420-136B-4D14-936C-407746E963EF - 7f23fb6207146ff7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Swift.Array&lt;_0211222_TeddyDemilew_NYCSchools.School&gt;, _0211222_TeddyDemilew_NYCSchools.NetworkError&gt;) -&gt; () in _0211222_TeddyDemilew_NYCSchoolsTests._0211222_TeddyDemilew_NYCSchoolsTests.testModelView_forSuccessfulFetchSchool() throws -&gt; ()"
+                  moduleName = "20211222-TeddyDemilew-NYCSchoolsTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/teddy/iDev/apps/zCodeLab/20211222-TeddyDemilew-NYCSchools/20211222-TeddyDemilew-NYCSchoolsTests/_0211222_TeddyDemilew_NYCSchoolsTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "116">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EA6E3127-77DF-4055-8724-5DDD0BCB8C57"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "20211222-TeddyDemilew-NYCSchoolsTests/_0211222_TeddyDemilew_NYCSchoolsTests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "96"
+            endingLineNumber = "96"
+            landmarkName = "testModelView_forSuccessfulFetchSATData()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

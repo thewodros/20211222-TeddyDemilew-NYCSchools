@@ -26,6 +26,7 @@
 		9F9CE4472773A9D100014AAC /* NavigationControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9CE4462773A9D100014AAC /* NavigationControllerExtensions.swift */; };
 		9F9CE44B2773C9D700014AAC /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F9CE44A2773C9D700014AAC /* MapViewController.m */; };
 		9F9CE44C2774019200014AAC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F9CE40627732EFD00014AAC /* Assets.xcassets */; };
+		9F9CE450277404AA00014AAC /* MockNetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9CE44F277404AA00014AAC /* MockNetworkClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		9F9CE4482773C9D700014AAC /* 20211222-TeddyDemilew-NYCSchools-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "20211222-TeddyDemilew-NYCSchools-Bridging-Header.h"; sourceTree = "<group>"; };
 		9F9CE4492773C9D700014AAC /* MapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MapViewController.h; path = "20211222-TeddyDemilew-NYCSchools/Views/MapViewController.h"; sourceTree = SOURCE_ROOT; };
 		9F9CE44A2773C9D700014AAC /* MapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = MapViewController.m; path = "20211222-TeddyDemilew-NYCSchools/Views/MapViewController.m"; sourceTree = SOURCE_ROOT; };
+		9F9CE44F277404AA00014AAC /* MockNetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +181,7 @@
 			children = (
 				9F9CE439277335D800014AAC /* Networking.swift */,
 				9F9CE43B2773367100014AAC /* SocrataNetworkingClient.swift */,
+				9F9CE44F277404AA00014AAC /* MockNetworkClient.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -333,6 +336,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F9CE4322773318B00014AAC /* Coordinator.swift in Sources */,
+				9F9CE450277404AA00014AAC /* MockNetworkClient.swift in Sources */,
 				9F9CE43E27736AA800014AAC /* HomeCustomCell.swift in Sources */,
 				9F9CE4382773343600014AAC /* SatData.swift in Sources */,
 				9F9CE442277394FA00014AAC /* SatDataDetailsViewController.swift in Sources */,
